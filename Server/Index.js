@@ -3,10 +3,7 @@ const path = require('path');
 
 const app = express();
 const port = 3005; 
-const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/bundle.js', (req, res) => {
